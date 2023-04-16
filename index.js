@@ -5,7 +5,9 @@ if(process.env.NODE_ENV!=='production')
     require('dotenv').config();
 }
 app.set('view engine','ejs');
-
+app.get('/',(req,res)=>{
+    res.render("index");
+});
 app.get('/home',(req,res)=>{
     res.render("index");
 })
