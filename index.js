@@ -6,10 +6,16 @@ if(process.env.NODE_ENV!=='production')
 }
 app.set('view engine','ejs');
 
-app.get('/',(req,res)=>{
+app.get('/home',(req,res)=>{
     res.render("index");
 })
-const port=process.env.PORT;
-app.listen(port,()=>{
+app.get('/products',(req,res)=>{
+    res.render("products");
+})
+app.get('/about',(req,res)=>{
+    res.render("about");
+});
+// const port=process.env.PORT;
+app.listen(3000,()=>{
     console.log('server started');
 })
