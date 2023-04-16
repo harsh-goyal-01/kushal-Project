@@ -15,7 +15,7 @@ app.get('/products',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render("about");
 });
-// const port=process.env.PORT;
-app.listen(3000,()=>{
+const port=process.env.PORT;
+app.listen(port,()=>{
     console.log('server started');
 })
